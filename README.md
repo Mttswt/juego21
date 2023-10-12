@@ -1,4 +1,4 @@
-# Ventiuna
+# Ventiuna -- realizado por Matthew Toro, Jonathan Cruz y Sebastian charry
 
 El Juego de 21 es un juego de cartas, con una o más barajas permite a dos jugadores pedir cartas hasta estar lo más próximo al valor de 21 sin pasarse.
 

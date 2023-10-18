@@ -12,4 +12,12 @@ class Carta:
 
     def mostrar_carta(self):
         return self.pinta, self.valor
-    
+
+class CartaFrancesa(Carta):
+    def __init__(self, valor, pinta):
+        super().__init__(valor, pinta)  # Llamar al constructor de la clase base
+
+class CartaEspanola(Carta):
+    def __init__(self, valor, pinta):
+        super().__init__(valor, pinta)  # Llamar al constructor de la clase base
+

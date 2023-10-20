@@ -1,7 +1,6 @@
 import pygame
 import random
 import sys
-from carta import *
 from juego import Juego
 
 # Initialize Pygame
@@ -81,36 +80,7 @@ def seleccionar_mazo():
 mazo_seleccionado = seleccionar_mazo()
 cartas = cargar_cartas(mazo_seleccionado)
 
-# Create a Juego instance
-juego = Juego(mazo_seleccionado)
-juego.iniciar_juego()
-
-# Main game loop
-jugador = juego.jugador2.cartas  # Player's cards
-crupier = juego.jugador1  # AI's cards
-
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
-
-    ventana.fill((0, 128, 0))  # Fondo verde
-
-    # Display player's cards
-    mostrar_carta(ventana, jugador[0], 100, 100)
-    mostrar_carta(ventana, jugador[1], 200, 100)
-
-    # Display AI's cards
-    crupier.mostrar_cartas_enemigo(ventana, 300, 100)
-
-    # Check game outcome (win, lose, or tie)
-    resultado = juego.valorar_juego()
-    if resultado == "Jugador gana":
-        print("¡Jugador gana!")
-    elif resultado == "Casa gana":
-        print("¡Casa gana!")
-    elif resultado == "Empate":
-        print("¡Es un empate!")
-
-    pygame.display.update()
+j=Juego(mazo_seleccionado)
+j.iniciar_juego()
+j.jugar()
+j.valorar_juego()
